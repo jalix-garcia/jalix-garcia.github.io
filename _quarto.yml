@@ -1,0 +1,38 @@
+project:
+  type: website
+  pre-render: scripts/build_pages.py
+  render:
+    - "*.qmd"
+  resources:
+    - "files/**"
+    - "images/**"
+
+website:
+  title: "Jennifer Alix-García"
+  description: >-
+    Jennifer Alix-García is an applied microeconomist working on environment and
+    development, economic geography, and forced migration. She is Professor of
+    Applied Economics at Oregon State University.
+  favicon: favicon.svg
+  open-graph: true
+  navbar:
+    right:
+      - href: index.qmd
+        text: Home
+      - href: publications.qmd
+        text: Publications
+      - href: work-in-progress.qmd
+        text: Work in progress
+      - href: teaching.qmd
+        text: Teaching & advising
+      - href: files/Alix-Garcia-CV.pdf
+        text: CV
+  page-footer:
+    left: "© 2026 Jennifer Alix-García"
+    right: "Department of Applied Economics, Oregon State University"
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    smooth-scroll: true
+    anchor-sections: false

@@ -1,0 +1,63 @@
+---
+title: "Teaching & advising"
+---
+
+## Syllabi
+
+Representative syllabi from courses I have taught.
+
+### Undergraduate
+
+::: {.course-list}
+- [The pandemic and the economy](files/syllabi/aec199-pandemic-and-the-economy.pdf) [AEC 199 · Oregon State University]{.course-meta}
+- [Benefit-cost analysis](files/syllabi/aec434-benefit-cost-analysis-2020.pdf) [AEC 434 · Oregon State University · 2020]{.course-meta}
+- [Introduction to microeconomics](files/syllabi/econ111-principles-of-microeconomics-2008.pdf) [ECON 111 · University of San Francisco · 2008]{.course-meta}
+- [Applied econometrics](files/syllabi/econ460-introduction-to-econometrics-2006.pdf) [ECON 460 · University of Montana · 2006]{.course-meta}
+- [Environmental economics](files/syllabi/econ230-environmental-economics-2008.pdf) [ECON 230 · University of San Francisco · 2008]{.course-meta}
+- [Development economics](files/syllabi/aae474-economic-development-2015.pdf) [AAE/ECON 474 · University of Wisconsin–Madison · 2015]{.course-meta}
+- [Development and environment](files/syllabi/aae344-environment-and-the-global-economy-2012.pdf) [AAE/IES 344 · University of Wisconsin–Madison · 2012]{.course-meta}
+:::
+
+### Graduate
+
+::: {.course-list}
+- [Development and environment](files/syllabi/aae729-environment-and-development-2012.pdf) [AAE 729 · University of Wisconsin–Madison · 2012]{.course-meta}
+- [Foundations of development economics](files/syllabi/aae642-foundations-of-development-economics-2017.pdf) [AAE 642 · University of Wisconsin–Madison · 2017]{.course-meta}
+- [Dissertation proposal writing](files/syllabi/aae875-dissertation-proposal-2012.pdf) [AAE 875 · University of Wisconsin–Madison · 2012]{.course-meta}
+:::
+
+## Advising
+
+Below are the Ph.D. and master's students for whom I have been the major advisor (committee chair). I have also been a member of many other committees; those students are not listed here. Where available, names link to the student's web presence.
+
+::: {.two-col}
+::: {}
+### Ph.D.
+
+- [Roberto Toto](https://sites.google.com/view/roberto-v-toto/)
+- [Laura Mazaud](https://www.linkedin.com/in/laura-mazaud-ecodev/)
+- [Alejandro Abarca](https://www.alejandroabarca.com/)
+- Jens Engelmann: Economist, USAA Federal Savings Bank
+- Rachel Frattarola: Economist, U.S. Office of Management and Budget
+- [Emma Gjerdseth](https://www.emmagjerdseth.com/)
+- [Fanny Moffette](https://fannymoffette.com/)
+- [Ya-ting Chuang](http://www.yatingchuang.com/)
+- [Alexander David Natanson](https://natansoa.wixsite.com/my-site)
+- [Emily Sellars](https://emilysellars.com/)
+- [Charlie Thompson](https://www.linkedin.com/in/charles-thompson-60aa8a68/)
+- [Sarah Walker](https://sites.google.com/site/sarahwalkereconomics/home)
+- [Patricia Yañez-Pagans](https://www.linkedin.com/in/patricia-yanez-pagans-30066675)
+- [Na Zhao](http://eyeonhousing.org/author/na-zhao/)
+:::
+
+::: {}
+### Master's
+
+- Arman Shaid
+- [Charlie Thompson](https://www.linkedin.com/in/charles-thompson-60aa8a68/)
+- [Sarah Janzen](https://sites.google.com/view/sarahjanzen/home)
+- Jason Do
+- Josh Schellenberg
+- [Todd Wynn](https://www.linkedin.com/in/toddwynn/)
+:::
+:::

@@ -1,0 +1,723 @@
+# Publications and work in progress: the single source for every list on the site.
+#
+# scripts/build_pages.py reads this file before each render and writes the
+# publication lists used by index.qmd, publications.qmd and work-in-progress.qmd.
+# Add a paper here once and it appears everywhere it should.
+#
+# Fields for each [[pub]]:
+#   title       Title as published.
+#   with        Co-authors, written as they should read after "with". Omit if sole-authored.
+#   venue       Journal, book, or publisher. Shown in italics.
+#   citation    Volume(issue): pages, e.g. "95(2): 417–435". Optional.
+#   year        Publication year.
+#   forthcoming true while the paper is accepted but not yet out.
+#   doi         DOI without the https://doi.org/ prefix. The title links here.
+#   url         Main link when there is no DOI (a report or working paper).
+#   manuscript  Path to a PDF in files/papers/.
+#   links       Extra links, each { label = "...", url = "..." } on one line.
+#   theme       One of the [[theme]] ids below. Not needed for work in progress.
+#   type        article | chapter | report | wip
+#   status      Work in progress only, e.g. "Revise and resubmit".
+#   featured    true to list the paper under "Recent publications" on the home page.
+#   thumbnail   Optional image shown beside the paper under "Recent publications"
+#               (images/pubs/, about 700 pixels wide). thumbnail_alt describes it.
+#   summary     One or two plain-language sentences. Shown on the home page and on
+#               the publications page.
+#
+# Each [[theme]] has an id, name, question, and a photo: image (path), image_alt
+# (a description for screen readers), and image_focus (which part of the photo to
+# keep when it is cropped, as a CSS position such as "center 40%").
+#
+# Within each theme and type, papers appear newest first; papers from the same
+# year keep the order they have in this file.
+
+[[theme]]
+id = "land-use-change"
+name = "Causes of land use change"
+question = "What causes deforestation?"
+image = "images/theme-land-use-change.jpg"
+image_alt = "A Mexican hillside where pine forest, cattle pasture, and a cornfield meet"
+image_focus = "center 52%"
+
+[[theme]]
+id = "land-use-policy"
+name = "Land use policy"
+question = "How can we prevent land use change?"
+image = "images/theme-land-use-policy.jpg"
+image_alt = "Buttress roots of a rainforest tree"
+image_focus = "center 55%"
+
+[[theme]]
+id = "forced-migration"
+name = "Forced migration"
+question = "How do internally displaced people and refugees affect host communities?"
+image = "images/theme-forced-migration.jpg"
+image_alt = "Rows of tarpaulin shelters in a camp for displaced people, with families in the foreground"
+image_focus = "center 40%"
+
+[[theme]]
+id = "history-geography"
+name = "Economic history, geography, and other stuff"
+question = "How do history and geography determine the landscapes we see today? And other miscellaneous questions."
+image = "images/theme-history-geography.jpg"
+image_alt = "Detail of Diego Rivera's mural The Great City of Tenochtitlan"
+image_focus = "center 35%"
+
+
+# ---------------------------------------------------------------------------
+# Causes of land use change
+# ---------------------------------------------------------------------------
+
+[[pub]]
+title = "Trade-offs and synergies for agriculture and environmental outcomes in the tropics"
+with = "Juliano Assunção, Teevrat Garg, Prakash Mishra, and Fanny Moffette"
+venue = "Review of Environmental Economics and Policy"
+citation = "20(2): 149–173"
+year = 2026
+doi = "10.1086/742011"
+thumbnail = "images/pubs/2026-reep-tradeoffs.png"
+thumbnail_alt = "Scatter plot of the long difference in log deforestation against log agricultural production for tropical countries"
+manuscript = "files/papers/2026-reep-tradeoffs-agriculture-environment.pdf"
+theme = "land-use-change"
+type = "article"
+featured = true
+summary = "A synthesis of the evidence on how farming and the environment interact across the tropics, cataloging policies that highlight where food production and environmental quality can be made to work together."
+
+[[pub]]
+title = "The unintended consequences of production bans: the case of the 2018 Kenya logging moratorium"
+with = "Anne Bartlett, Alejandro Abarca, Sarah Walker, Jamon Van Den Hoek, Paulo Murillo-Sandoval, and Hannah K. Friedrich"
+venue = "Environmental Research Letters"
+citation = "19(9): 094007"
+year = 2024
+doi = "10.1088/1748-9326/ad661c"
+thumbnail = "images/pubs/2024-erl-charcoal-ban.png"
+thumbnail_alt = "Chart of monthly charcoal imports into Kenya and real charcoal prices, 2017 to 2019"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HYNWS7" },
+]
+theme = "land-use-change"
+type = "article"
+featured = true
+summary = "Production bans do not always do what is intended. Kenya's 2018 logging ban displaced wood extraction rather than reducing it, driving domestic charcoal prices up about 36% and charcoal imports from neighboring Uganda up 133% within the first six months."
+
+[[pub]]
+title = "Remotely incorrect? Accounting for nonclassical measurement error in satellite data on deforestation"
+with = "Dan Millimet"
+venue = "Journal of the Association of Environmental and Resource Economists"
+citation = "10(5): 1335–1367"
+year = 2023
+doi = "10.1086/723723"
+manuscript = "files/papers/2023-jaere-remotely-incorrect.pdf"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/PIKTVS" },
+  { label = "World Bank blog summary", url = "https://blogs.worldbank.org/impactevaluations/unobserved-errors-earth-observation" },
+]
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "Drivers of forest cover change in Eastern Europe and European Russia, 1985–2012"
+with = "Catalina Munteanu, Na Zhao, Peter Potapov, Alexander Prishchepov, Volker Radeloff, Alexander Krylov, and Eugenia Bragina"
+venue = "Land Use Policy"
+citation = "59: 284–297"
+year = 2016
+doi = "10.1016/j.landusepol.2016.08.014"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "Playing favorites: Tax incentives and urban growth in China, 1978–2010"
+with = "Annemarie Schneider and Na Zhao"
+venue = "Land Economics"
+citation = "92(1): 1–27"
+year = 2016
+doi = "10.3368/le.92.1.1"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "The effect of decentralized governance on timber extraction in European Russia"
+with = "Kelly Wendland and David Lewis"
+venue = "Environmental and Resource Economics"
+citation = "57(1): 19–40"
+year = 2014
+doi = "10.1007/s10640-013-9657-8"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "The ecological footprint of poverty alleviation: Evidence from Mexico's Oportunidades program"
+with = "Craig McIntosh, Katharine Sims, and Jarrod Welch"
+venue = "Review of Economics and Statistics"
+citation = "95(2): 417–435"
+year = 2013
+doi = "10.1162/REST_a_00349"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "Prices, land tenure institutions, and geography: A matching analysis of farmland abandonment in post-socialist Eastern Europe"
+with = "Tobias Kuemmerle and Volker Radeloff"
+venue = "Land Economics"
+citation = "88(3): 425–443"
+year = 2012
+doi = "10.3368/le.88.3.425"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "Regional- and district-level drivers of timber harvesting in European Russia after the collapse of the Soviet Union"
+with = "Kelly Wendland, David Lewis, Mutlu Ozdogan, Matthias Baumann, and Volker Radeloff"
+venue = "Global Environmental Change"
+citation = "21(4): 1290–1300"
+year = 2011
+doi = "10.1016/j.gloenvcha.2011.07.003"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "Lessons about parks and poverty from a decade of forest loss and economic growth around Kibale National Park, Uganda"
+with = "Lisa Naughton-Treves and Colin Chapman"
+venue = "Proceedings of the National Academy of Sciences"
+citation = "108(34): 13919–13924"
+year = 2011
+doi = "10.1073/pnas.1013332108"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "An exploration of the positive effect of inequality on common property forests"
+venue = "Journal of Development Economics"
+citation = "87(1): 92–105"
+year = 2008
+doi = "10.1016/j.jdeveco.2007.12.009"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "A spatial analysis of common property deforestation"
+venue = "Journal of Environmental Economics and Management"
+citation = "53(2): 141–157"
+year = 2007
+doi = "10.1016/j.jeem.2006.09.004"
+theme = "land-use-change"
+type = "article"
+
+[[pub]]
+title = "A tale of two communities: Explaining deforestation in Mexico"
+with = "Alain de Janvry and Elisabeth Sadoulet"
+venue = "World Development"
+citation = "33(2): 219–235"
+year = 2005
+doi = "10.1016/j.worlddev.2004.07.010"
+theme = "land-use-change"
+type = "article"
+
+
+# ---------------------------------------------------------------------------
+# Land use policy
+# ---------------------------------------------------------------------------
+
+[[pub]]
+title = "Emerging design principles for environmental, economic, and equity successes in land conservation"
+with = "Katharine Sims"
+venue = "Proceedings of the National Academy of Sciences"
+citation = "123(22): e2421731122"
+year = 2026
+doi = "10.1073/pnas.2421731122"
+thumbnail = "images/pubs/2026-pnas-design-principles.png"
+thumbnail_alt = "Diagram of land conservation approaches: direct regulation, incentive-based, and collective action"
+theme = "land-use-policy"
+type = "article"
+featured = true
+summary = "Drawing on a synthesis of more than 200 studies, this paper proposes eight design principles for conservation programs that can succeed simultaneously on environmental, economic, and equity goals."
+
+[[pub]]
+title = "Land protection and social equity"
+with = "Katharine Sims"
+venue = "Annual Review of Resource Economics"
+year = 2026
+doi = "10.1146/annurev-resource-011624-040006"
+theme = "land-use-policy"
+type = "article"
+featured = true
+
+[[pub]]
+title = "Land tenure security and deforestation: Evidence from a framed field experiment in Uganda"
+with = "Sarah Walker, Anne Bartlett, and Alice Calder"
+venue = "Journal of Environmental Economics and Management"
+citation = "131: 103137"
+year = 2025
+doi = "10.1016/j.jeem.2025.103137"
+thumbnail = "images/pubs/2025-jeem-land-tenure.jpg"
+thumbnail_alt = "Map of forest loss by county in Uganda, 2010 to 2019"
+links = [
+  { label = "Replication files", url = "https://doi.org/10.7910/DVN/KSCWJK" },
+]
+theme = "land-use-policy"
+type = "article"
+featured = true
+summary = "In a field experiment with Ugandan forest users, insecure land tenure raised tree extraction by 23%, while the option to secure tenure through certification cut that effect in half, showing that strengthening property rights can meaningfully reduce deforestation."
+
+[[pub]]
+title = "Evidence on scaling forest restoration from the Atlantic Forest Restoration Pact in Brazil"
+with = "Roberto Toto, Katharine Sims, Bruno Coutinho, Carlos Muñoz Brenes, Ludmila Pugliese, and Alex Mendes"
+venue = "Nature Communications"
+citation = "16: 4715"
+year = 2025
+doi = "10.1038/s41467-025-59194-3"
+thumbnail = "images/pubs/2025-natcomm-atlantic-forest.jpg"
+thumbnail_alt = "Map of parcels supported by the Atlantic Forest Restoration Pact along Brazil's southern coast"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/EZ5KCW" },
+  { label = "Mongabay coverage", url = "https://news.mongabay.com/2025/12/new-study-points-to-private-land-as-key-to-atlantic-forest-recovery/" },
+]
+theme = "land-use-policy"
+type = "article"
+featured = true
+summary = "Brazil's Atlantic Forest Restoration Pact increased restored forest cover on supported private land by 10–20 percentage points, with the largest gains in more remote areas and in states with stronger environmental enforcement, demonstrating that large-scale restoration on private land is achievable when the economic and institutional conditions line up."
+
+[[pub]]
+title = "Agricultural subsidies: Cutting into forest conservation?"
+with = "Fanny Moffette"
+venue = "Environment and Development Economics"
+citation = "29(3): 179–205"
+year = 2024
+doi = "10.1017/S1355770X23000189"
+thumbnail = "images/pubs/2024-ede-agricultural-subsidies.jpg"
+thumbnail_alt = "Map of Mexico showing livestock subsidies per hectare in 2008 and payments for ecosystem services recipients"
+manuscript = "files/papers/2024-ede-agricultural-subsidies.pdf"
+theme = "land-use-policy"
+type = "article"
+featured = true
+summary = "Mexico's per-head livestock subsidy increased municipal deforestation by about 7%, though the effect was smaller where payments for ecosystem services were more common, suggesting that agricultural subsidies can quietly undercut conservation programs and would do less damage if better targeted."
+
+[[pub]]
+title = "Overlapping land rights and deforestation in Uganda: 20 years of evidence"
+with = "Sarah Walker, Anne Bartlett, Jamon Van Den Hoek, Hannah Friedrich, Paulo Murillo-Sandoval, and Rosemary Isoto"
+venue = "Global Environmental Change"
+citation = "82: 102701"
+year = 2023
+doi = "10.1016/j.gloenvcha.2023.102701"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/7FRVK9" },
+]
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "The impact of near-real-time deforestation alerts across the tropics"
+with = "Fanny Moffette, Katherine Shea, and Amy Pickens"
+venue = "Nature Climate Change"
+citation = "11(2): 172–178"
+year = 2021
+doi = "10.1038/s41558-020-00956-w"
+links = [
+  { label = "Data and code", url = "https://doi.org/10.5281/zenodo.4054099" },
+]
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Using referenda to improve targeting and decrease costs of conditional cash transfers"
+with = "Katharine Sims and Daniel Phaneuf"
+venue = "Journal of Public Economics"
+citation = "176: 179–194"
+year = 2019
+doi = "10.1016/j.jpubeco.2019.06.001"
+manuscript = "files/papers/2019-jpube-referenda.pdf"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Payments for environmental services supported social capital while increasing land management"
+with = "Katharine R.E. Sims, Victor H. Orozco-Olvera, Laura E. Costica, Jorge David Fernández Medina, and Sofía Romo Monroy"
+venue = "Proceedings of the National Academy of Sciences"
+citation = "115(27): 7016–7021"
+year = 2018
+doi = "10.1073/pnas.1720873115"
+links = [
+  { label = "Data", url = "https://drive.google.com/open?id=1mg2-h3OuANM8Lp7m9-IUcjzvwsUoEa2U" },
+  { label = "Interview on the Jefferson Exchange (audio)", url = "https://cpa.ds.npr.org/ksor/audio/2018/06/jefferson_exchange_2018_june_25_hr_1_a.mp3" },
+  { label = "Mongabay coverage", url = "https://news.mongabay.com/2018/07/payments-for-ecosystem-services-can-boost-social-capital-in-addition-to-forest-management-study/" },
+]
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Avoided deforestation linked to environmental registration of properties in the Brazilian Amazon"
+with = "Lisa Rausch, Jessica L'Roe, Holly Gibbs, and Jacob Munger"
+venue = "Conservation Letters"
+citation = "11(3): e12414"
+year = 2018
+doi = "10.1111/conl.12414"
+manuscript = "files/papers/2018-conl-environmental-registration.pdf"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Forest conservation effects of Brazil's zero deforestation cattle agreements undermined by leakage"
+with = "Holly Gibbs"
+venue = "Global Environmental Change"
+citation = "47: 201–217"
+year = 2017
+doi = "10.1016/j.gloenvcha.2017.08.009"
+manuscript = "files/papers/2017-gec-zero-deforestation-leakage.pdf"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Parks versus PES: Evaluating direct and incentive-based land conservation in Mexico"
+with = "Katharine Sims"
+venue = "Journal of Environmental Economics and Management"
+citation = "86: 8–28"
+year = 2017
+doi = "10.1016/j.jeem.2016.11.010"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Only one tree from each seed? Environmental effectiveness and poverty alleviation in Mexico's payments for ecosystem services program"
+with = "Katharine Sims and Patricia Yañez-Pagans"
+venue = "American Economic Journal: Economic Policy"
+citation = "7(4): 1–40"
+year = 2015
+doi = "10.1257/pol.20130139"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Improving environmental and social targeting through adaptive management in Mexico's payments for hydrological services program"
+with = "Katharine Sims, Elizabeth Shapiro-Garza, Leah Fine, Volker Radeloff, Glen Aronson, Selene Castillo, Carlos Ramirez-Reyes, and Patricia Yañez-Pagans"
+venue = "Conservation Biology"
+citation = "28(5): 1151–1159"
+year = 2014
+doi = "10.1111/cobi.12318"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Payment for ecosystem services from forests"
+with = "Hendrik Wolff"
+venue = "Annual Review of Resource Economics"
+citation = "6: 361–380"
+year = 2014
+doi = "10.1146/annurev-resource-100913-012524"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Forest conservation and slippage: Evidence from Mexico's national payments for ecosystem services program"
+with = "Elizabeth Shapiro and Katharine Sims"
+venue = "Land Economics"
+citation = "88(4): 613–638"
+year = 2012
+doi = "10.3368/le.88.4.613"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "The role of deforestation risk and calibrated compensation in designing payments for environmental services"
+with = "Alain de Janvry and Elisabeth Sadoulet"
+venue = "Environment and Development Economics"
+citation = "13(3): 375–394"
+year = 2008
+doi = "10.1017/S1355770X08004336"
+theme = "land-use-policy"
+type = "article"
+
+[[pub]]
+title = "Lessons learned from Mexico's payment for environmental services program"
+with = "Alain de Janvry, Elisabeth Sadoulet, and Juan Manuel Torres"
+venue = "Payment for Environmental Services in Agricultural Landscapes"
+citation = "eds. David Zilberman, Randy Stringer, Leslie Lipper, and Takumi Sakuyama. Springer, pp. 163–188"
+year = 2009
+doi = "10.1007/978-0-387-72971-8_8"
+theme = "land-use-policy"
+type = "chapter"
+
+[[pub]]
+title = "The role of risk in targeting payments for environmental services"
+with = "Alain de Janvry and Elisabeth Sadoulet"
+venue = "Avoided Deforestation"
+citation = "eds. Charles Palmer and Stefanie Engel. Routledge, pp. 231–248"
+year = 2009
+doi = "10.4324/9780203880999-22"
+theme = "land-use-policy"
+type = "chapter"
+
+[[pub]]
+title = "Can environmental cash transfers reduce deforestation and improve social outcomes? A regression discontinuity analysis of Mexico's national program (2011–2014)"
+with = "Katharine Sims, Victor Hugo Orozco-Olvera, Laura Costica, Jorge David Fernández Medina, Sofía Romo Monroy, and Stefano Pagiola"
+venue = "World Bank Policy Research Working Paper 8707"
+year = 2019
+url = "http://documents.worldbank.org/curated/en/694951547752004287/pdf/WPS8707.pdf"
+theme = "land-use-policy"
+type = "report"
+
+[[pub]]
+title = "Evaluation of CONAFOR's payments for hydrological services program, 2003–2010"
+with = "Katharine Sims, Glen Aronson, Volker Radeloff, Carlos Ramirez-Reyes, Elizabeth Shapiro, and Patricia Yañez-Pagans"
+venue = "Policy report for the Mexican National Forestry Commission (CONAFOR)"
+year = 2012
+url = "https://www.amherst.edu/system/files/media/Informe%2520Final%2520121128.pdf"
+theme = "land-use-policy"
+type = "report"
+
+[[pub]]
+title = "Impact of payments for ecosystem services on deforestation in Mexico: Preliminary lessons for REDD"
+with = "Katharine Sims and Elizabeth Shapiro"
+venue = "Land Tenure Center Brief 11"
+year = 2010
+url = "https://www.amherst.edu/system/files/media/Policy%2520Brief-REDD%2520PES%2520Mexico-English-2010.pdf"
+links = [
+  { label = "In Spanish", url = "https://www.amherst.edu/system/files/media/0916/ltc%2520brief%252011-S-pes%2520and%2520defor%2520mex.pdf" },
+]
+theme = "land-use-policy"
+type = "report"
+
+[[pub]]
+title = "An assessment of Mexico's payment for environmental services program"
+with = "Alain de Janvry, Elisabeth Sadoulet, and Juan Manuel Torres-Rojo"
+venue = "Report for the Food and Agriculture Organization of the United Nations"
+year = 2006
+theme = "land-use-policy"
+type = "report"
+
+
+# ---------------------------------------------------------------------------
+# Forced migration
+# ---------------------------------------------------------------------------
+
+[[pub]]
+title = "Assessing the direct and spillover effects of shocks to refugee remittances"
+with = "Anne Bartlett and Sarah Walker"
+venue = "World Development"
+citation = "121: 63–74"
+year = 2019
+doi = "10.1016/j.worlddev.2019.04.015"
+manuscript = "files/papers/2019-wd-refugee-remittances.pdf"
+links = [
+  { label = "Refugee data", url = "https://drive.google.com/open?id=1yt_Ezvepq2Vkye-cbUfj0al9QJhTbQE1" },
+  { label = "Turkana data", url = "https://drive.google.com/open?id=15YbXzrrbbZpE_SyFkZnDJVO4sIKS02l1" },
+]
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "Do refugee camps help or hurt hosts? The case of Kakuma, Kenya"
+with = "Sarah Walker, Anne Bartlett, Harun Onder, and Apurva Sanghi"
+venue = "Journal of Development Economics"
+citation = "130: 66–83"
+year = 2018
+doi = "10.1016/j.jdeveco.2017.09.005"
+manuscript = "files/papers/2018-jde-kakuma.pdf"
+links = [
+  { label = "Nighttime lights data", url = "https://drive.google.com/open?id=15cRpf_BSALdPWx-GdFtM7fwKiRKuMPC0" },
+  { label = "Household data", url = "https://drive.google.com/open?id=17JthxktzpBK8EOvAbb51ImOB7OaSYzXg" },
+  { label = "Household roster", url = "https://drive.google.com/open?id=1FTUpM96fs-tQbmFW7hmGzqnQGF2HBYwH" },
+  { label = "VoxDev summary", url = "https://voxdev.org/topic/labour-markets-migration/how-refugee-camps-benefit-host-communities" },
+  { label = "Refugees Deeply summary", url = "https://deeply.thenewhumanitarian.org/refugees/community/2017/12/08/nighttime-lights-illuminate-positive-impacts-of-refugee-camps" },
+  { label = "Voice of America radio (from 12:25)", url = "https://www.voanews.com/a/4163906.html" },
+]
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "Occupations under fire: The labour market in a complex emergency"
+with = "Anne Bartlett"
+venue = "Oxford Economic Papers"
+citation = "67(3): 687–714"
+year = 2015
+doi = "10.1093/oep/gpv006"
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "The landscape of conflict: IDPs, aid and land-use change in Darfur"
+with = "Anne Bartlett and David Saah"
+venue = "Journal of Economic Geography"
+citation = "13(4): 589–617"
+year = 2013
+doi = "10.1093/jeg/lbs044"
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "Displaced populations, humanitarian assistance and hosts: A framework for analyzing impacts on semi-urban households"
+with = "Anne Bartlett and David Saah"
+venue = "World Development"
+citation = "40(2): 373–386"
+year = 2012
+doi = "10.1016/j.worlddev.2011.06.002"
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "The effect of refugee inflows on host communities: Evidence from Tanzania"
+with = "David Saah"
+venue = "World Bank Economic Review"
+citation = "24(1): 148–170"
+year = 2010
+doi = "10.1093/wber/lhp014"
+theme = "forced-migration"
+type = "article"
+
+[[pub]]
+title = "The economics of hosting refugees: A host community perspective from Turkana"
+with = "Erhan Artuc and Harun Onder"
+venue = "World Bank Group and UNHCR"
+year = 2017
+doi = "10.1596/26269"
+theme = "forced-migration"
+type = "report"
+
+[[pub]]
+title = "Impacts of Kakuma refugee camp on local hosts, Turkana region, Kenya"
+with = "Anne Bartlett, Sarah Walker, and David Mayom"
+venue = "Background paper for the World Bank report “Yes” in My Backyard?"
+year = 2016
+doi = "10.1596/25855"
+theme = "forced-migration"
+type = "report"
+
+
+# ---------------------------------------------------------------------------
+# Economic history, geography, and other stuff
+# ---------------------------------------------------------------------------
+
+[[pub]]
+title = "Country of women? Repercussions of the Triple Alliance War in Paraguay"
+with = "Laura Schechter, Felipe Valencia Caicedo, and S. Jessica Zhu"
+venue = "Journal of Economic Behavior & Organization"
+citation = "202: 131–167"
+year = 2022
+doi = "10.1016/j.jebo.2022.07.025"
+manuscript = "files/papers/2022-jebo-country-of-women.pdf"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/UNI3QK" },
+]
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Better to be indirect? Testing the accuracy and cost-savings of indirect surveys"
+with = "Katharine R.E. Sims and Laura Costica"
+venue = "World Development"
+citation = "142: 105419"
+year = 2021
+doi = "10.1016/j.worlddev.2021.105419"
+manuscript = "files/papers/2021-wd-indirect-surveys.pdf"
+links = [
+  { label = "Replication files", url = "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YRMRDA" },
+]
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Locational fundamentals, trade, and the changing urban landscape of Mexico"
+with = "Emily Sellars"
+venue = "Journal of Urban Economics"
+citation = "116: 103213"
+year = 2020
+doi = "10.1016/j.jue.2019.103213"
+manuscript = "files/papers/2020-jue-locational-fundamentals.pdf"
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Labor scarcity, land tenure, and historical legacy: Evidence from Mexico"
+with = "Emily Sellars"
+venue = "Journal of Development Economics"
+citation = "135: 504–516"
+year = 2018
+doi = "10.1016/j.jdeveco.2018.07.014"
+manuscript = "files/papers/2018-jde-labor-scarcity.pdf"
+links = [
+  { label = "Data", url = "https://drive.google.com/open?id=1_TSFfoLvp0kCZeGb0mSt27W6gpz47clF" },
+]
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Tariffs and trees: The effects of the Austro-Hungarian customs union on specialization and land-use change"
+with = "Sarah Walker, Volker Radeloff, and Jacek Kozak"
+venue = "Journal of Economic History"
+citation = "78(4): 1142–1178"
+year = 2018
+doi = "10.1017/S0022050718000554"
+manuscript = "files/papers/2018-jeh-tariffs-and-trees.pdf"
+links = [
+  { label = "Data", url = "https://drive.google.com/open?id=1HHFbwh9YrNRk5_i5Cwv6yoFxgu_uCPjo" },
+]
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Inequality, community participation, and the allocation of collective profits"
+with = "Benjamin Harris"
+venue = "Economics & Politics"
+citation = "26(2): 285–308"
+year = 2014
+doi = "10.1111/ecpo.12035"
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "The increasing role of agribusiness in agricultural economics"
+with = "David Zilberman, John Miranowski, and Amir Heiman"
+venue = "Journal of Agribusiness"
+citation = "20(1)"
+year = 2001
+theme = "history-geography"
+type = "article"
+
+[[pub]]
+title = "Industrial organizations considerations in the management of pesticide resistance"
+with = "David Zilberman"
+venue = "The Economics of Pest Resistance"
+citation = "Resources for the Future"
+year = 2003
+theme = "history-geography"
+type = "chapter"
+
+[[pub]]
+title = "Persistence and place: History and geography in political economy"
+with = "Emily Sellars"
+venue = "The Political Economist, newsletter of the APSA Political Economy Section"
+citation = "15(1)"
+year = 2019
+manuscript = "files/papers/2019-political-economist-persistence-and-place.pdf"
+theme = "history-geography"
+type = "report"
+
+[[pub]]
+title = "Infrastructure and agricultural development in AGRA countries"
+venue = "A report for the Bill & Melinda Gates Foundation"
+year = 2007
+manuscript = "files/papers/2007-gates-infrastructure-report.pdf"
+theme = "history-geography"
+type = "report"
+
+
+# ---------------------------------------------------------------------------
+# Work in progress
+# ---------------------------------------------------------------------------
+
+[[pub]]
+title = "Growing awareness: Evaluating the impact of environmental education on attitudes, knowledge, and behavior"
+with = "Christopher Knittel"
+status = "Revise and resubmit"
+type = "wip"
+
+[[pub]]
+title = "Designing forest conservation payments in settings with a variety of land tenure systems"
+with = "Anne Bartlett, Sarah Walker, and Rosemary Isoto"
+status = "Revise and resubmit"
+manuscript = "files/papers/wip-forest-conservation-payments-uganda.pdf"
+type = "wip"
+
+[[pub]]
+title = "Payments for ecosystem services under regulation: Evidence from Brazil's Reflorestar program"
+with = "Alipio Ferreira and Katharine Sims"
+type = "wip"

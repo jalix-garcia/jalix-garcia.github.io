@@ -1,0 +1,10 @@
+---
+title: "Publications"
+toc: true
+toc-title: "Themes"
+toc-depth: 2
+---
+
+Grouped by research theme, newest first. Each title links to the published version. Replication packages for many of these papers are on my [Dataverse](https://dataverse.harvard.edu/dataverse/JAlix-Garcia).
+
+{{< include _generated/publications.md >}}
